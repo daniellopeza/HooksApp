@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export function Table () {
+export function NameTable () {
     const [name, setName] = useState('Daniel');
     const [surname, setSurname] = useState('Lopez');
 
@@ -25,34 +25,6 @@ export function Table () {
 
     function handeSurnameChange(e) {
         setSurname(e.target.value);
-    }
-
-    const [bills, setBills] = useState([
-        {
-            name: 'Rent',
-            amount: 2000
-        },
-        {
-            name: 'Parking',
-            amount: 200
-        },
-        {
-            name: 'Car',
-            amount: 400 
-        }
-    ]);
-
-    function renderTableDate() {
-        return bills.map((bill, index) => {
-            // destructure 
-            const {name, amount} = bill; 
-            return (
-                <tr key={name}> 
-                    <td>{name}</td>
-                    <td>{amount}</td>
-                </tr>
-            )
-        })
     }
 
     return (

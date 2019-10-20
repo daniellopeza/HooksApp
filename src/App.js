@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Table } from './Table';
+import { Bills } from './Bills';
+import { NameTable } from './NameTable';
 import { TodoForm } from './TodoForm';
 import { Todo } from './Todo';
 import './App.css';
@@ -40,7 +41,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>
-          <Table/>
+          <NameTable/>
+        </div>
+        <div>
+          <Bills/>
         </div>
         <div>
           <p>
