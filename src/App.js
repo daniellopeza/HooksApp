@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Table } from './Table';
 import { TodoForm } from './TodoForm';
 import { Todo } from './Todo';
 import './App.css';
@@ -38,17 +39,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          {todos.map((todo, index) => (
-            <Todo key={index} 
-            index={index} 
-            todo={todo} 
-            completeTodo={completeTodo}
-            removeTodo={removeTodo}
-            />
-          ))}
+        <div>
+          <Table/>
+        </div>
+        <div>
+          <p>
+            {todos.map((todo, index) => (
+              <Todo key={index} 
+              index={index} 
+              todo={todo} 
+              completeTodo={completeTodo}
+              removeTodo={removeTodo}
+              />
+            ))}
           <TodoForm addTodo={addTodo} />
         </p>
+        </div>
       </header>
     </div>
   );
