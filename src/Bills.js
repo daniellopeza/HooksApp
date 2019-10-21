@@ -16,26 +16,6 @@ export function Bills(){
         }
     ]);
 
-    function renderTableData() {
-        return bills.map((bill, index) => {
-            // destructure 
-            const {name, amount} = bill; 
-            return (
-                <tr key={name}> 
-                    <td>{name}</td>
-                    <td>{amount}</td>
-                </tr>
-            )
-        })
-    }
-
-    function renderTableHeader() {
-      let header = Object.keys(bills[0]);
-      return header.map((key, index) => {
-         return <th key={index}>{key.toUpperCase()}</th>
-      })
-    }
-
     return (
         <div> 
             <div style={{alignText: 'center'}}>
@@ -44,11 +24,31 @@ export function Bills(){
             <table>
                 <tbody>
                 <tr>
-                    {renderTableHeader()}
+                    {renderTableHeader(bills)}
                 </tr>
-                    {renderTableData()}
+                    {renderTableData(bills)}
                 </tbody>
             </table>
         </div>
     );
+}
+
+function renderTableHeader(bills) {
+    let header = Object.keys(bills[0]);
+    return header.map((key, index) => {
+        return <th key={index}>{key.toUpperCase()}</th>
+    })
+}
+
+function renderTableData(bills) {
+    return bills.map((bill, index) => {
+        // destructure 
+        const {name, amount} = bill; 
+        return (
+            <tr key={name}> 
+                <td>{name}</td>
+                <td>{amount}</td>
+            </tr>
+        )
+    })
 }
