@@ -3,17 +3,8 @@ import React, { useState } from 'react';
 export function TodoForm({ addTodo }){
   const [newTodo, setNewTodo] = useState('');
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    if(!newTodo) return;
-    addTodo(newTodo);
-
-    // clear form 
-    setNewTodo('');
-  }
-
   return (
-    <form onSubmit={handleSubmit}> 
+    <form onSubmit={(e) => handleSubmit(e, newTodo, setNewTodo, addTodo)}> 
       <input type="text" 
       className="input" 
       value={newTodo} 
@@ -22,4 +13,14 @@ export function TodoForm({ addTodo }){
       style={{textAlign:'center', width:'100%'}}/>
     </form> 
   )
+}
+
+
+function handleSubmit(e, newTodo, setNewTodo, addTodo) {
+  e.preventDefault();
+  if(!newTodo) return;
+  addTodo(newTodo);
+
+  // clear form 
+  setNewTodo('');
 }
