@@ -3,7 +3,6 @@ import { Bills } from './Bills';
 import { NameTable } from './NameTable';
 import { TodoForm } from './TodoForm';
 import { Todo } from './Todo';
-import './App.css';
 
 // using functional components instead of classes
 function App() {
