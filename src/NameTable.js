@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import './NameTable.css';
 
 export function NameTable () {
-    const name = useFormInput('Daniel');
-    const surname = useFormInput('Lopes');
+    const name = useFormInput('enter name');
+    const surname = useFormInput('entersurname');
     const width  = useWindowWidth();
     useDocumentTitle(`${name.value} ${surname.value}`);
 
     return (
-        <section>
+        <div className="inputForm">
           <div>
-            <input {...name}/>
+            <input style={{textAlign: 'center'}} {...name}/>
           </div>
           <div>
-            <input {...surname}/>
+            <input style={{textAlign: 'center'}} {...surname}/>
           </div>
           <div>
             <input 
+              style={{textAlign: 'center'}}
               value={width}
             />
           </div>
-        </section>
+        </div>
     );
 }
 

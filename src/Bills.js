@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Bills.css';
 
 export function Bills(){
     const [bills, setBills] = useState([
@@ -17,8 +18,8 @@ export function Bills(){
     ]);
 
     return (
-        <div> 
-            <div style={{alignText: 'center'}}>
+        <div className="bills"> 
+            <div>
                 BILLS: 
             </div>
             <table>
