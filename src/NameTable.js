@@ -42,6 +42,7 @@ function useFormInput(initialValue){
 }
 
 function useDocumentTitle(title){
+  // runs after initial render and every update
   useEffect(() => {
       document.title = title;
   });

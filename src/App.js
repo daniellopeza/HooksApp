@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Bills } from './Bills';
 import { NameTable } from './NameTable';
+import NameTableNoHooks from './NameTableNoHooks';
 import { TodoForm } from './TodoForm';
 import { Todo } from './Todo';
 import './Bills';
@@ -44,21 +45,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>
+        <div style={{padding: '5px 5px 5px 5px'}}>
           <NameTable/>
         </div>
-        <div className="bills">
-          <p>
-            {todos.map((todo, index) => (
-              <Todo key={index} 
-              index={index} 
-              todo={todo} 
-              completeTodo={completeTodo}
-              removeTodo={removeTodo}
-              />
-            ))}
+        <div style={{padding: '5px 5px 5px 5px'}}>
+          <NameTableNoHooks/> 
+        </div>
+        <div className="bills" style={{padding: '5px 5px 5px 5px'}}>
+          {todos.map((todo, index) => (
+            <Todo key={index} 
+            index={index} 
+            todo={todo} 
+            completeTodo={completeTodo}
+            removeTodo={removeTodo}
+            />
+          ))}
           <TodoForm addTodo={addTodo} />
-        </p>
         </div>
       </header>
     </div>
