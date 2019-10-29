@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Bills } from './Bills';
 import { NameTable } from './NameTable';
 import NameTableNoHooks from './NameTableNoHooks';
-import { TodoForm } from './TodoForm';
-import { Todo } from './Todo';
-import './Bills';
+import { InputForm } from './InputForm';
+import { Bill } from './Bill';
 
 // using functional components instead of classes
 function App() {
@@ -51,16 +49,16 @@ function App() {
         <div style={{padding: '5px 5px 5px 5px'}}>
           <NameTableNoHooks/> 
         </div>
-        <div className="bills" style={{padding: '5px 5px 5px 5px'}}>
+        <div className="bills">
           {todos.map((todo, index) => (
-            <Todo key={index} 
+            <Bill key={index} 
             index={index} 
             todo={todo} 
             completeTodo={completeTodo}
             removeTodo={removeTodo}
             />
           ))}
-          <TodoForm addTodo={addTodo} />
+          <InputForm addTodo={addTodo} />
         </div>
       </header>
     </div>

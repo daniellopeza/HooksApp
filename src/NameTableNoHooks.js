@@ -53,24 +53,25 @@ export default class NameTableNoHooks extends React.Component {
     render(){
         return (
             <div className="inputForm">
-            <div>
-                <input style={{textAlign: 'center'}} 
-                value={this.state.name} 
-                onChange={this.handleNameChange}
-                />
-            </div>
-            <div>
-                <input style={{textAlign: 'center'}} 
-                value={this.state.surname} 
-                onChange={this.handleSurnameChange}
-                />
-            </div>
-            <div>
-                <input 
-                style={{textAlign: 'center'}}
-                value={this.state.width}
-                />
-            </div>
+                No Hooks
+                <div>
+                    <input style={{textAlign: 'center'}} 
+                    value={this.state.name} 
+                    onChange={this.handleNameChange}
+                    />
+                </div>
+                <div>
+                    <input style={{textAlign: 'center'}} 
+                    value={this.state.surname} 
+                    onChange={this.handleSurnameChange}
+                    />
+                </div>
+                <div>
+                    <input 
+                    style={{textAlign: 'center'}}
+                    value={this.state.width}
+                    />
+                </div>
             </div>
         );  
     }

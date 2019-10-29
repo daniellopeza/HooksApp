@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Bills.css';
 
-export function Bills(){
+export function Practice(){
     const [bills, setBills] = useState([
         {
             name: 'Rent',

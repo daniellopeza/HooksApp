@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export function TodoForm({ addTodo }){
+export function InputForm({ addTodo }){
   const [newTodo, setNewTodo] = useState('');
 
   return (

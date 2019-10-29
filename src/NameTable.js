@@ -8,7 +8,8 @@ export function NameTable () {
     useDocumentTitle(`${name.value} ${surname.value}`);
 
     return (
-        <div className="inputForm">
+        <div className="inputForm" style={{ marginTop: '50px' }}>
+          Hooks
           <div>
             <input style={{textAlign: 'center'}} {...name}/>
           </div>

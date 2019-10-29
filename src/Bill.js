@@ -2,7 +2,7 @@ import React from 'react';
 import './Bills.css';
 
 // {} to take props
-export function Todo({ todo, index, completeTodo, removeTodo  }) {
+export function Bill({ todo, index, completeTodo, removeTodo  }) {
   return (
     <div className="bill" style={{textDecoration: todo.isCompleted ? 'line-through' : ''}}>
         {`${(index + 1)}: ${todo.text}`}
